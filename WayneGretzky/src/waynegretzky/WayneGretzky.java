@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *Omar Sayyed
+Sept 19th 2018
+Display Wayne Gretzky is number 99 from memory
  */
 
 package waynegretzky;
