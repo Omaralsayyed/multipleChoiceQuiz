@@ -16,11 +16,14 @@ public class AreaOfARectangle {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //define variables
         double width = 5.7;
         double length = 4.8;
        double area = 0.0;
         // TODO code application logic here
+       // formula
         area = width*length;
+        //to display answer
         System.out.println ("width=" +width);
         System.out.println ("length=" + length);
         System.out.println ("area =" +area);
