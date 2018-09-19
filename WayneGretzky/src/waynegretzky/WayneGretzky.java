@@ -16,11 +16,13 @@ public class WayneGretzky {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //defien variables 
         String player;
         int number = 99;
         
         // TODO code application logic here
         player = "Wayne Gretzky";
+        //display from memory
         System.out.println (player + " is number " + number);
     }
     
