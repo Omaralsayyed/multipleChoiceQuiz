@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Omar Sayyed
+Area of a Circle that has a radius of 15cm
+Sept. 18th 2018
  */
 
 package areaofacircle;
@@ -16,6 +16,14 @@ public class AreaOfACircle {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        double radius = 15;
+        double pi = 3.14;
+        double area = 0.0;
+        //define variables for area
+        area = pi*radius*radius;
+        System.out.println("The area of the circle is " + area + " cm squared");
+        
+        
         // TODO code application logic here
     }
     
