@@ -24,9 +24,9 @@ public class AreaOfARectangle {
        // formula
         area = width*length;
         //to display answer
-        System.out.println ("width=" +width);
-        System.out.println ("length=" + length);
-        System.out.println ("area =" +area);
+        System.out.println ("width=" +width +
+        "\nlength=" + length +
+         "\narea=" +area);
         
     }
     
