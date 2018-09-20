@@ -24,11 +24,11 @@ public class BillOfSale {
         double hst = 0.0;
         double change = 0.0;
         // TODO code application logic here
-        //
+        //formulas for different values
                 hst = shirt*tax;
                 total = shirt + hst;
                 change = cash - total;
-                
+                //To display values on screen  
                 System.out.println ("$" + shirt + " Shirt" +
                         "\n$" + hst + " Tax" +
                         "\n$" + total + " Total Amount Due" +
