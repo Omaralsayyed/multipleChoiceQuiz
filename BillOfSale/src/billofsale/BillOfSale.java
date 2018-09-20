@@ -16,6 +16,7 @@ public class BillOfSale {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //stating all variables
         double shirt = 12.49;
         double cash = 20;
         double tax = .13;
@@ -23,11 +24,16 @@ public class BillOfSale {
         double hst = 0.0;
         double change = 0.0;
         // TODO code application logic here
+        //
                 hst = shirt*tax;
                 total = shirt + hst;
                 change = cash - total;
                 
-                System.out.println
+                System.out.println ("$" + shirt + " Shirt" +
+                        "\n$" + hst + " Tax" +
+                        "\n$" + total + " Total Amount Due" +
+                        "\n$" + cash + " Amount Givin In Cash" +
+                        "\n$" + change + " Change Due");
                 
                        
                 
