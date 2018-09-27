@@ -27,6 +27,7 @@ public class FormCapturingData extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        hatPic = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
         enterButton = new javax.swing.JButton();
         nameInput = new javax.swing.JTextField();
@@ -39,15 +40,21 @@ public class FormCapturingData extends javax.swing.JFrame {
         copy = new javax.swing.JMenuItem();
         paste = new javax.swing.JMenuItem();
         help = new javax.swing.JMenu();
+        callNumber = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 255));
         jPanel1.setForeground(new java.awt.Color(153, 0, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        hatPic.setIcon(new javax.swing.ImageIcon("JFRCVIFS.Student.UGDSB.ED\\Home\\Students\\omsay9559\\Documents\\256-256-c69660109b9e9c4d1f71df8fe56969bd-birthday.png")); // NOI18N
+        jPanel1.add(hatPic, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 207, 235));
 
         nameLabel.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         nameLabel.setForeground(new java.awt.Color(153, 0, 0));
         nameLabel.setText("Enter Your Name");
+        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 25, 446, 76));
 
         enterButton.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
         enterButton.setForeground(new java.awt.Color(153, 0, 0));
@@ -57,43 +64,22 @@ public class FormCapturingData extends javax.swing.JFrame {
                 enterButtonActionPerformed(evt);
             }
         });
+        enterButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                enterButtonKeyPressed(evt);
+            }
+        });
+        jPanel1.add(enterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 170, -1, -1));
 
         nameInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameInputActionPerformed(evt);
             }
         });
+        jPanel1.add(nameInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 107, 356, -1));
 
         outputLabel.setText("My Second GUI");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(enterButton)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(nameInput, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(outputLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE))))
-                .addGap(0, 21, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(nameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(outputLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(enterButton)
-                .addContainerGap(81, Short.MAX_VALUE))
-        );
+        jPanel1.add(outputLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 145, 356, -1));
 
         file.setText("File");
 
@@ -131,6 +117,21 @@ public class FormCapturingData extends javax.swing.JFrame {
 
         help.setText("Help");
         help.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        help.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpActionPerformed(evt);
+            }
+        });
+
+        callNumber.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_SLASH, java.awt.event.InputEvent.CTRL_MASK));
+        callNumber.setText("helpNumber");
+        callNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                callNumberActionPerformed(evt);
+            }
+        });
+        help.add(callNumber);
+
         menuBar.add(help);
 
         setJMenuBar(menuBar);
@@ -169,6 +170,21 @@ public class FormCapturingData extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nameInputActionPerformed
 
+    private void helpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpActionPerformed
+        
+    }//GEN-LAST:event_helpActionPerformed
+
+    private void callNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_callNumberActionPerformed
+     
+        outputLabel.setText ("Call (123) 456-7890 for assistance" );
+      
+    }//GEN-LAST:event_callNumberActionPerformed
+
+    private void enterButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enterButtonKeyPressed
+       
+      
+    }//GEN-LAST:event_enterButtonKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -205,12 +221,14 @@ public class FormCapturingData extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem callNumber;
     private javax.swing.JMenuItem copy;
     private javax.swing.JMenuItem cut;
     private javax.swing.JMenu edit;
     private javax.swing.JButton enterButton;
     private javax.swing.JMenuItem exit;
     private javax.swing.JMenu file;
+    private javax.swing.JLabel hatPic;
     private javax.swing.JMenu help;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuBar menuBar;
