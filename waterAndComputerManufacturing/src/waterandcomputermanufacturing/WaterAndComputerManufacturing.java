@@ -22,16 +22,17 @@ public class WaterAndComputerManufacturing {
         
         // declare variables
     double combo, water;
+    final double WATER_AMT = 1.5;
 
         //ask user the question
-        System.out.println("Enter How many Computer and Monitor combos you own: ");
+        System.out.println("Enter ow many Computer and Monitor combos you own: ");
             combo = keyedInput.nextDouble ();
         
             //Calculate amt of water used
-            water = combo*1.5;
+            water = combo*WATER_AMT;
         
                 //tell user how much water was used
-                 System.out.println("The amount of water your monitor and computer combos have used is " + water + " tons.");
+                 System.out.println("The amount of water your Monitor and Computer combos have used is " + water + " tons.");
         
                 
         
