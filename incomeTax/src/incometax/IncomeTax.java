@@ -26,10 +26,10 @@ public class IncomeTax {
        final double FOURTH = 0.29;
        final double FIFTH = 0.33;
        
-       
+       //Ask the user for their income
        System.out.println("Enter your yearly income: ");
                     income = keyedInput.nextDouble ();
-                    
+                    //Calculate the tax owed based on the seperate brackets
                     if (income < 46605){
                        taxTotal =  income*FIRST;
                     }else if (income < 93208){
@@ -55,7 +55,7 @@ public class IncomeTax {
                        taxFifth = (income - 205842) * FIFTH;
                        taxTotal = taxFirst + taxSecond + taxThird + taxFourth + taxFifth;
     }
-                            
+                            //tell user how much they owe
                             
                             System.out.println("your yearly tax rate is $" + taxTotal);
         
