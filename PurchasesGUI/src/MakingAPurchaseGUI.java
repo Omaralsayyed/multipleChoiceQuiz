@@ -115,6 +115,11 @@ public class MakingAPurchaseGUI extends javax.swing.JFrame {
         });
 
         tabulateBtn.setText("Tabulate");
+        tabulateBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tabulateBtnActionPerformed(evt);
+            }
+        });
 
         subtotalLbl.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         subtotalLbl.setText("Subtotal:");
@@ -140,49 +145,49 @@ public class MakingAPurchaseGUI extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(instructionsLbl))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addComponent(instructionsLbl)
                 .addGap(0, 22, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(chocoLbl)
-                    .addComponent(glazedlbl)
-                    .addComponent(bostonLbl)
-                    .addComponent(honeyLbl)
-                    .addComponent(sprinkleLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(glazedNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77)
-                        .addComponent(tabulateBtn))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(honeyNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(chocoLbl)
+                            .addComponent(glazedlbl)
+                            .addComponent(bostonLbl)
+                            .addComponent(honeyLbl)
+                            .addComponent(sprinkleLbl))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(GrandTotalLbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(grandTotalNum))
-                    .addComponent(sprinkleNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(bostonNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(hstLbl))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(chocoNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33)
-                                .addComponent(subtotalLbl)))
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(subtotalNum)
-                            .addComponent(hstNum))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(glazedNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(77, 77, 77)
+                                .addComponent(tabulateBtn))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(honeyNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(GrandTotalLbl)
+                                .addGap(18, 18, 18)
+                                .addComponent(grandTotalNum))
+                            .addComponent(sprinkleNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(bostonNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(hstLbl))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(chocoNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(33, 33, 33)
+                                        .addComponent(subtotalLbl)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(subtotalNum)
+                                    .addComponent(hstNum)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -257,6 +262,52 @@ public class MakingAPurchaseGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_sprinkleNumActionPerformed
 
+    private void tabulateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tabulateBtnActionPerformed
+        //declare variables
+        double bostonPrc, chocoPrc, glazedPrc, honeyPrc, sprinklePrc, subTotal, HST, grandTotal;
+        
+        final double TAX = 0.13;
+        final double BOSTON = 1.39;
+        final double CHOCO = 0.99;
+        final double GLAZED = 0.99;
+        final double HONEY = 1.39;
+        final double SPRINKLE = 1.19;
+        
+//        bostonPrc = (int) (Integer.parseInt(bostonNum.getText())* BOSTON);
+//        chocoPrc = (int) (Integer.parseInt(chocoNum.getText())* CHOCO);
+//        glazedPrc = (int) (Integer.parseInt(glazedNum.getText())* GLAZED);
+//        honeyPrc = (int) (Integer.parseInt(honeyNum.getText())* HONEY);
+//        sprinklePrc = (int) (Integer.parseInt(sprinkleNum.getText())* SPRINKLE);
+        //grab user's input
+        bostonPrc = (Double.parseDouble(bostonNum.getText())* BOSTON);
+        chocoPrc =  (Double.parseDouble(chocoNum.getText())* CHOCO);
+        glazedPrc = (Double.parseDouble(glazedNum.getText())* GLAZED);
+        honeyPrc =  (Double.parseDouble(honeyNum.getText())* HONEY);
+        sprinklePrc =  (Double.parseDouble(sprinkleNum.getText())* SPRINKLE);
+        
+        //calculate totals
+        subTotal= glazedPrc + bostonPrc + chocoPrc + honeyPrc + sprinklePrc;
+        HST=  (subTotal * TAX );
+        grandTotal = subTotal + HST;
+        //output totals
+            subTotal = subTotal * 100;
+            subTotal = Math.round (subTotal);
+            subTotal = subTotal / 100;
+            
+            HST = HST * 100;
+            HST = Math.round (HST);
+            HST = HST / 100;
+            
+            grandTotal = grandTotal * 100;
+            grandTotal = Math.round (grandTotal);
+            grandTotal = grandTotal / 100;
+            
+        subtotalNum.setText ("$" + subTotal);
+        hstNum.setText ("$" + HST);
+        grandTotalNum.setText ("$" + grandTotal);
+                
+    }//GEN-LAST:event_tabulateBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -285,10 +336,8 @@ public class MakingAPurchaseGUI extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MakingAPurchaseGUI().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new MakingAPurchaseGUI().setVisible(true);
         });
     }
 
