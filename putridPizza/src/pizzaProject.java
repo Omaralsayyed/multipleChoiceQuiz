@@ -204,9 +204,15 @@ public class pizzaProject extends javax.swing.JFrame {
             
              subtotalNum.setText ("" + subtotal );
              taxNum.setText ("" + tax );
-             grandTotalNum.setText ("" + grandTotal );
+             grandTotalLbl.setText ("" + grandTotal );
            
-            
+                if (diamater < 15 ){
+                    outputMessegeLbl.setText ("We are going to make you a cute little pizza!")
+                }
+                else if (diamater < 20 ){
+                    outputMessegeLbl.setText ("you like weird sizes!")
+                }
+                   
     }//GEN-LAST:event_tabBtnActionPerformed
 
     /**
