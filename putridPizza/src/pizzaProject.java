@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Omar Sayyed
+October 11th 2018
+Calculates the cost of a pizza and outputs a messege based on the diamater 
  */
 
 /**
