@@ -55,7 +55,7 @@ public class pizzaProject extends javax.swing.JFrame {
         diamaterLbl.setText("Enter the diamater (cm) of the pizza you would like:");
 
         diamaterNum.setBackground(new java.awt.Color(255, 204, 0));
-        diamaterNum.setFont(new java.awt.Font("Elephant", 0, 11)); // NOI18N
+        diamaterNum.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
         diamaterNum.setForeground(new java.awt.Color(204, 0, 0));
         diamaterNum.setText("0");
         diamaterNum.addActionListener(new java.awt.event.ActionListener() {
@@ -77,33 +77,37 @@ public class pizzaProject extends javax.swing.JFrame {
         subtotalLbl.setForeground(new java.awt.Color(204, 0, 0));
         subtotalLbl.setText("Subtotal:  $");
 
-        subtotalNum.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
-        subtotalNum.setForeground(new java.awt.Color(153, 0, 0));
+        subtotalNum.setFont(new java.awt.Font("Elephant", 0, 18)); // NOI18N
+        subtotalNum.setForeground(new java.awt.Color(204, 0, 0));
         subtotalNum.setText("0.00");
 
         taxLbl.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
         taxLbl.setForeground(new java.awt.Color(204, 0, 0));
         taxLbl.setText("Taxes:      $");
 
-        taxNum.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
-        taxNum.setForeground(new java.awt.Color(153, 0, 0));
+        taxNum.setFont(new java.awt.Font("Elephant", 0, 18)); // NOI18N
+        taxNum.setForeground(new java.awt.Color(204, 0, 0));
         taxNum.setText("0.00");
 
-        grandTotalLbl.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
-        grandTotalLbl.setForeground(new java.awt.Color(153, 0, 0));
+        grandTotalLbl.setFont(new java.awt.Font("Elephant", 0, 18)); // NOI18N
+        grandTotalLbl.setForeground(new java.awt.Color(204, 0, 0));
         grandTotalLbl.setText("0.00");
 
         grandTotalNum.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
         grandTotalNum.setForeground(new java.awt.Color(204, 0, 0));
         grandTotalNum.setText("Grand Total:      $");
 
-        outputMessegeLbl.setFont(new java.awt.Font("Lucida Handwriting", 0, 18)); // NOI18N
+        outputMessegeLbl.setFont(new java.awt.Font("Lucida Handwriting", 0, 14)); // NOI18N
         outputMessegeLbl.setForeground(new java.awt.Color(204, 0, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(tabBtn)
+                .addGap(169, 169, 169))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -113,28 +117,23 @@ public class pizzaProject extends javax.swing.JFrame {
                         .addGap(42, 42, 42)
                         .addComponent(diamaterLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(diamaterNum, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(diamaterNum, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(taxLbl)
+                            .addComponent(grandTotalNum)
+                            .addComponent(subtotalLbl))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(taxNum)
+                            .addComponent(subtotalNum)
+                            .addComponent(grandTotalLbl))))
                 .addContainerGap(39, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(tabBtn)
-                .addGap(169, 169, 169))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(outputMessegeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(taxLbl)
-                    .addComponent(grandTotalNum)
-                    .addComponent(subtotalLbl))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(taxNum)
-                    .addComponent(subtotalNum)
-                    .addComponent(grandTotalLbl))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(outputMessegeLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,7 +160,7 @@ public class pizzaProject extends javax.swing.JFrame {
                     .addComponent(grandTotalLbl))
                 .addGap(25, 25, 25)
                 .addComponent(outputMessegeLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         File.setText("File");
@@ -191,6 +190,7 @@ public class pizzaProject extends javax.swing.JFrame {
     }//GEN-LAST:event_diamaterNumActionPerformed
 
     private void tabBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tabBtnActionPerformed
+        //declare variables
         double subtotal, tax, grandTotal;
         double diamater;
         final double HST = 0.13;
@@ -198,21 +198,38 @@ public class pizzaProject extends javax.swing.JFrame {
         final double COST_PER_CM = 0.50;
         diamater = (Double.parseDouble(diamaterNum.getText()));
         
+        //calculate subtotal, tax and grand total
             subtotal = INITIAL_COST + (COST_PER_CM * diamater);
             tax = subtotal*HST;
             grandTotal = tax + subtotal;
             
+              //rounding 
+            grandTotal = grandTotal * 100;
+            grandTotal = Math.round (grandTotal);
+            grandTotal = grandTotal / 100;
+            
+            tax = tax * 100;
+            tax = Math.round (tax);
+            tax = tax / 100;
+            
+            //output costs
              subtotalNum.setText ("" + subtotal );
              taxNum.setText ("" + tax );
              grandTotalLbl.setText ("" + grandTotal );
            
+             //output message depending on diamater of pizza
                 if (diamater < 15 ){
-                    outputMessegeLbl.setText ("We are going to make you a cute little pizza!")
+                    outputMessegeLbl.setText ("We are going to make you a cute little pizza!");
                 }
                 else if (diamater < 20 ){
-                    outputMessegeLbl.setText ("you like weird sizes!")
+                    outputMessegeLbl.setText ("you like weird sizes!");
                 }
-                   
+                else if (diamater < 40){
+                    outputMessegeLbl.setText ("This will be delicious!");
+                }
+                else {
+                    outputMessegeLbl.setText ("Whoa, big pizza! You might need a truck to get this home!");
+                }   
     }//GEN-LAST:event_tabBtnActionPerformed
 
     /**
