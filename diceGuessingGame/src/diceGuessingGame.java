@@ -228,13 +228,17 @@ double percCorrect = 0;
     }//GEN-LAST:event_inputGuessNumActionPerformed
 
     private void rollBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollBtnActionPerformed
+      // setting up the random dice roll
         diceRoll = (int)Math.round(Math.random()*5+1);
         outcomeNumLbl.setText(String.valueOf(diceRoll));
         
+        //pulling the users guess
         userGuess = Integer.parseInt(inputGuessNum.getText());
        
+        //add to the total roll counter
         totalRolls = totalRolls + 1;
         
+        //decides if user is right or wrong
         if (diceRoll== userGuess)
         {
             totalCorrect = totalCorrect + 1;
@@ -243,7 +247,7 @@ double percCorrect = 0;
         {
             totalIncorrect = totalIncorrect + 1;
         }
-        
+        //calculate percentage correct and round answer
         percCorrect = ((double) totalCorrect/(double)totalRolls)*100;
         
          
@@ -251,6 +255,7 @@ double percCorrect = 0;
             percCorrect = Math.round (percCorrect);
             percCorrect = percCorrect / 100;
             
+            //display results on the counters
             rollCountNum.setText(String.valueOf(totalRolls));
             CorrectGuessNumCounter.setText(String.valueOf(totalCorrect));
             incorrectGuessCountNum.setText(String.valueOf(totalIncorrect));
